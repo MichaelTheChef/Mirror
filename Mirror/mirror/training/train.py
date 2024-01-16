@@ -116,7 +116,7 @@ class Train:
             if self.keyboard_predictions:
                 self.log.info("What the keyboard predictions would look like: {}".format(self.keyboard_predictions))
                 keys.use_data(training_data=df)
-                return self.keyboard_predictions
+            return self.keyboard_predictions
 
         elif action == "mouse-left":
             [self.mouse_left_predictions.append((df["Time"][i], df["Coordinates"][i]))
@@ -125,7 +125,7 @@ class Train:
             if self.mouse_left_predictions:
                 self.log.info("What the mouse left predictions would look like: {}".format(self.mouse_left_predictions))
                 mouse.use_left_data(training_data=df)
-                return self.mouse_left_predictions
+            return self.mouse_left_predictions
 
 
         elif action == "mouse-right":
@@ -136,7 +136,7 @@ class Train:
                 self.log.info(
                     "What the mouse right predictions would look like: {}".format(self.mouse_right_predictions))
                 mouse.use_right_data(training_data=df)
-                return self.mouse_right_predictions
+            return self.mouse_right_predictions
 
         elif action == "screen":
             [self.screen_predictions.append((df["Time"][i], df["Coordinates"][i]))
@@ -145,7 +145,7 @@ class Train:
             if self.screen_predictions:
                 self.log.info("What the screen predictions would look like: {}".format(self.screen_predictions))
                 screen.use_data(training_data=df)
-                return self.screen_predictions
+            return self.screen_predictions
 
     def save_model(self, model_list, action):
         """
