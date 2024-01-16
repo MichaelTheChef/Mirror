@@ -197,7 +197,3 @@ class Train:
                 self.model = collection.find_one({"id": model_id})["screen"]
             finally:
                 return collection.find_one({"id": model_id})["screen"]
-
-
-e = ["eee", *list(string.ascii_lowercase)]
-print(e)
